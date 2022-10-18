@@ -30,10 +30,10 @@ let play = function(){
     }
     console.log(bombPosition);
 
-    const divCell = document.createElement("div");
+    
     function cellCreate(numCell){
         const cellPerSide = Math.sqrt(cellNumber);
-        divCell;
+        const divCell = document.createElement("div");
         divCell.className = 'square';
         divCell.style.width = `calc(100% / ${cellPerSide} )`
         divCell.style.height = `calc(100% / ${cellPerSide} )`
@@ -52,7 +52,7 @@ let play = function(){
         for (let i = 1; i <= cellNumber; i++) {
             const cell = cellCreate(i);
             console.log(i);
-            divGrid.appendChild(divCell);
+            divGrid.appendChild(cell);
         }
         
         fieldGame.appendChild(divGrid);
